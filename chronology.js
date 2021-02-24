@@ -71,7 +71,6 @@ const margin = { top: 20, right: 100, bottom: 20, left: 100 },
   height = 3000 - margin.top - margin.bottom;
 let root;
 const svg = d3.select("svg")
-  //.append("svg")
   .attr("width", width + margin.right + margin.left)
   .attr("height", height + margin.top + margin.bottom)
 const g = svg.append("g")
@@ -245,7 +244,7 @@ function wrap(text, width) {
           lineHeight = .1, // ems
           x = text.attr("x"),
           y = text.attr("y"),
-          dy = 0, //parseFloat(text.attr("dy")),
+          dy = 0,
           tspan = text.text(null)
                       .append("tspan")
                       .attr("x", x)
